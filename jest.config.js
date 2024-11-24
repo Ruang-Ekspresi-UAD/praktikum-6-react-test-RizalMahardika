@@ -1,6 +1,7 @@
 module.exports = {
-  transform: {
-    '^.+\\.jsx?$': 'babel-jest',
+  moduleNameMapper: {
+    '\\.(css|less|sass|scss)$': 'identity-obj-proxy', // Untuk file CSS
+    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/__mocks__/fileMock.js', // Untuk file gambar
   },
-  testEnvironment: 'jsdom', // Add jsdom test environment
+  testEnvironment: 'jsdom', // Penting untuk pengujian React
 };
